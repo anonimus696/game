@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ідеальний Розріз (Perfect Cut)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="audio-controls">
+        <button id="mute-btn" title="Звукові ефекти">🔊</button>
+        <button id="music-btn" title="Фонова музика">🎵</button>
+    </div>
+
+    <div id="menu">
+        <h1 class="menu-title">Perfect Cut</h1>
+        <p>Зупини лінію точно по центру фігури!</p>
+
+        <div id="auth-block">
+            <input type="text" id="nickname-input" placeholder="Твій нікнейм..." maxlength="12">
+        </div>
+
+        <div id="welcome-block" style="display: none;">
+            <p style="font-size: 18px; color: #ffffff;">Привіт, <span id="welcome-name"
+                    style="color: #00ffcc; font-weight: bold;"></span>!</p>
+            <span id="change-name-btn"
+                style="font-size: 12px; color: #666; cursor: pointer; text-decoration: underline;">Змінити
+                нікнейм</span>
+        </div>
+
+        <button id="start-btn">СТАРТ</button>
+
+        <div id="leaderboard-box">
+            <h3>ТОП ГРАВЦІВ</h3>
+            <ol id="leaderboard-list">
+            </ol>
+        </div>
+    </div>
+
+    <div id="game-ui" style="display: none;">
+        <h1 class="game-title">Perfect Cut</h1>
+
+        <div id="player-name-wrap">ГРАВЕЦЬ: <span id="player-name">---</span></div>
+
+        <div id="stats">
+            <div>Рахунок: <span id="score-val" style="color: #ffffff;">0</span></div>
+            <div id="highscore-wrap">Рекорд: <span id="highscore-val">0</span></div>
+        </div>
+
+        <div id="lives">❤️❤️❤️❤️❤️</div>
+
+        <div class="game-viewport">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+            <div id="status-msg">ТАПНИ, ЩОБ РОЗРІЗАТИ</div>
+
+            <div id="percent-display">50.0 | 50.0</div>
+        </div>
+
+        <div id="hint">Зупини лінію, поки вона ЗЕЛЕНА (діапазон 42% - 58%)</div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
